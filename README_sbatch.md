@@ -317,9 +317,5 @@ For the GenomicsDB option, substitute the appropriate final VCF filename.
 | Job runs out of memory | Inspect `sacct` and adjust `#SBATCH --mem` |
 | Job takes too long | The original script loops over samples **sequentially** in one SLURM job; use job arrays or Nextflow for sample-level parallelism |
 
-## 11. What comes next?
-
-**Part 2** will implement the same analysis with **Nextflow DSL2**, separating alignment/preprocessing and variant calling into reusable modules, with independent tasks, SLURM scheduling, and `-resume` support.
-
 ---
 
