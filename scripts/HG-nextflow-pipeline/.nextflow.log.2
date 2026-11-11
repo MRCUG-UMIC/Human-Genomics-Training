@@ -1,0 +1,148 @@
+Nov-09 22:25:54.677 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile modules,slurm -w /tmp/work
+Nov-09 22:25:54.882 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.10.5
+Nov-09 22:25:54.938 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/mnt/users/d/da/david/.nextflow/plugins; core-plugins: nf-agent-pi@0.6.0,nf-agent@0.2.0,nf-amazon@3.12.1,nf-azure@1.24.3,nf-cloudcache@0.6.2,nf-codecommit@0.6.1,nf-console@1.3.1,nf-google@1.29.1,nf-k8s@1.6.2,nf-seqera@0.26.2,nf-tower@1.32.2,nf-wave@1.22.5
+Nov-09 22:25:54.986 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-09 22:25:54.988 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-09 22:25:54.994 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Nov-09 22:25:55.026 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Nov-09 22:25:55.300 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Nov-09 22:25:55.313 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-09 22:25:55.358 [main] DEBUG nextflow.config.ConfigCmdAdapter - Found config local: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/nextflow.config
+Nov-09 22:25:55.364 [main] DEBUG nextflow.config.ConfigCmdAdapter - Parsing config file: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/nextflow.config
+Nov-09 22:25:55.370 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Nov-09 22:25:55.386 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `modules,slurm`
+Nov-09 22:25:56.346 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [modules, local, slurm]
+Nov-09 22:25:56.383 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-09 22:25:56.384 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-09 22:25:56.419 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /mnt/users/d/da/david/.nextflow/secrets/store.json
+Nov-09 22:25:56.424 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [LocalSecretsProvider] - activable => LocalSecretsProvider
+Nov-09 22:25:56.455 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [drunk_kirch] - revision: 6b82a9539b
+Nov-09 22:25:56.671 [main] DEBUG nextflow.Session - Session UUID: d156a939-6f9a-41d9-b61b-d6a26de8d3fa
+Nov-09 22:25:56.672 [main] DEBUG nextflow.Session - Run name: drunk_kirch
+Nov-09 22:25:56.673 [main] DEBUG nextflow.Session - Executor pool size: 32
+Nov-09 22:25:56.694 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-09 22:25:56.708 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-09 22:25:56.749 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.10.5 build 14654
+  Created: 02-11-2026 17:37 UTC (20:37 EAST)
+  System: Linux 3.16.0-77-generic
+  Runtime: Groovy 4.0.33 on OpenJDK 64-Bit Server VM 17.0.2+8-86
+  Encoding: UTF-8 (ANSI_X3.4-1968)
+  Process: 15042@dc2c1b11 [127.0.1.1]
+  CPUs: 32 - Mem: 251.9 GB (242.6 GB) - Swap: 256 GB (256 GB)
+Nov-09 22:25:56.774 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-09 22:25:56.795 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
+Nov-09 22:25:56.914 [main] DEBUG nextflow.Session - Work-dir: /tmp/work [ext2/ext3]
+Nov-09 22:25:56.916 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/bin
+Nov-09 22:25:56.945 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[K8sExecutor]
+Nov-09 22:25:56.970 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Nov-09 22:25:56.975 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Nov-09 22:25:57.056 [main] DEBUG nextflow.Session - Session start
+Nov-09 22:25:57.067 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Nov-09 22:25:58.623 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-09 22:25:59.174 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:ALIGNMENT` matches process ALIGNMENT
+Nov-09 22:25:59.187 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:25:59.188 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:25:59.209 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Nov-09 22:25:59.225 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m; resources: unlimited
+Nov-09 22:25:59.229 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Nov-09 22:25:59.233 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-09 22:25:59.298 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ALIGNMENT': maxForks=0; fair=false; array=0
+Nov-09 22:25:59.372 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:SORT_BAM` matches process SORT_BAM
+Nov-09 22:25:59.376 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:25:59.376 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:25:59.378 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SORT_BAM': maxForks=0; fair=false; array=0
+Nov-09 22:25:59.389 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:MARK_DUPLICATES` matches process MARK_DUPLICATES
+Nov-09 22:25:59.393 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:25:59.393 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:25:59.395 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MARK_DUPLICATES': maxForks=0; fair=false; array=0
+Nov-09 22:25:59.408 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:BASE_RECALIBRATOR` matches process BASE_RECALIBRATOR
+Nov-09 22:25:59.411 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:25:59.412 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:25:59.415 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BASE_RECALIBRATOR': maxForks=0; fair=false; array=0
+Nov-09 22:25:59.433 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:APPLY_BQSR` matches process APPLY_BQSR
+Nov-09 22:25:59.436 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:25:59.437 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:25:59.438 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'APPLY_BQSR': maxForks=0; fair=false; array=0
+Nov-09 22:25:59.454 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:25:59.454 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:25:59.456 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'VARIANT_CALLING': maxForks=0; fair=false; array=0
+Nov-09 22:25:59.492 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:25:59.493 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:25:59.494 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'JOINT_COMBINE': maxForks=0; fair=false; array=0
+Nov-09 22:25:59.504 [main] DEBUG nextflow.Session - Process names: VARIANT_CALLING, JOINT_COMBINE, ALIGNMENT, APPLY_BQSR, BASE_RECALIBRATOR, SORT_BAM, JOINT_GENOMICSDB, MARK_DUPLICATES
+Nov-09 22:25:59.511 [main] DEBUG nextflow.Session - Igniting dataflow network (9)
+Nov-09 22:25:59.521 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ALIGNMENT
+Nov-09 22:25:59.522 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SORT_BAM
+Nov-09 22:25:59.523 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MARK_DUPLICATES
+Nov-09 22:25:59.523 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BASE_RECALIBRATOR
+Nov-09 22:25:59.524 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > APPLY_BQSR
+Nov-09 22:25:59.525 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > VARIANT_CALLING
+Nov-09 22:25:59.525 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > JOINT_COMBINE
+Nov-09 22:25:59.526 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  _nf_script_e4dd9cf253001cf9: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/modules/alignment.nf
+  Main: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/main.nf
+  _nf_script_82b4db7f3255d3af: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/modules/variant_calling.nf
+Nov-09 22:25:59.527 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-09 22:25:59.527 [main] DEBUG nextflow.Session - Session await
+Nov-09 22:25:59.982 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process ALIGNMENT (HG02678) > jobId: 49133; workDir: /tmp/work/6f/58360d4b4632648d67734b556d8f60
+Nov-09 22:25:59.983 [Task submitter] INFO  nextflow.Session - [6f/58360d] Submitted process > ALIGNMENT (HG02678)
+Nov-09 22:26:00.071 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process ALIGNMENT (HG02562) > jobId: 49134; workDir: /tmp/work/bd/8c6366fe698d198d5cb06475c80d07
+Nov-09 22:26:00.073 [Task submitter] INFO  nextflow.Session - [bd/8c6366] Submitted process > ALIGNMENT (HG02562)
+Nov-09 22:26:00.140 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process ALIGNMENT (HG02573) > jobId: 49135; workDir: /tmp/work/52/8c6cbdc7d10f2801901fbe184a336d
+Nov-09 22:26:00.141 [Task submitter] INFO  nextflow.Session - [52/8c6cbd] Submitted process > ALIGNMENT (HG02573)
+Nov-09 22:26:00.199 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process ALIGNMENT (HG02585) > jobId: 49136; workDir: /tmp/work/e6/c0b7a6a084c22aabdd0e685d8c271e
+Nov-09 22:26:00.200 [Task submitter] INFO  nextflow.Session - [e6/c0b7a6] Submitted process > ALIGNMENT (HG02585)
+Nov-09 22:26:00.269 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process ALIGNMENT (HG02703) > jobId: 49137; workDir: /tmp/work/b7/efe8e251379113d2bde447e4a6e355
+Nov-09 22:26:00.270 [Task submitter] INFO  nextflow.Session - [b7/efe8e2] Submitted process > ALIGNMENT (HG02703)
+Nov-09 22:27:04.248 [Task monitor] WARN  n.executor.AbstractGridExecutor - [SLURM] queue (short) status cannot be fetched
+- cmd executed: squeue --noheader -o %i %t -t all -p short -u david
+- exit status : 143
+- output      :
+
+Nov-09 22:27:17.634 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Nov-09 22:27:17.669 [SIGINT handler] DEBUG nextflow.Session - The following nodes are still active:
+[process] SORT_BAM
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] MARK_DUPLICATES
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] BASE_RECALIBRATOR
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: ref_dir
+  port 2: (cntrl) -     ; channel: $
+
+[process] APPLY_BQSR
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: ref_dir
+  port 2: (cntrl) -     ; channel: $
+
+[process] VARIANT_CALLING
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: ref_dir
+  port 2: (cntrl) -     ; channel: $
+
+[process] JOINT_COMBINE
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: gvcfs
+  port 1: (value) bound ; channel: ref_dir
+  port 2: (cntrl) -     ; channel: $
+
+Nov-09 22:27:17.678 [SIGINT handler] WARN  n.processor.TaskPollingMonitor - Killing running tasks (5)
+Nov-09 22:27:19.253 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm) - terminating tasks monitor poll loop
+Nov-09 22:27:27.710 [SIGINT handler] DEBUG n.processor.TaskPollingMonitor - Failed to kill pending tasks BatchCleanup[
+executor: slurm; jobs to kill: 49133,49134,49135,49136,49137
+] -- cause: java.io.IOException: Stream closed
+Nov-09 22:27:27.714 [SIGINT handler] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=5; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Nov-09 22:27:27.809 [main] DEBUG nextflow.Session - Session await > all processes finished
+Nov-09 22:27:27.810 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-09 22:27:27.828 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Nov-09 22:27:27.851 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

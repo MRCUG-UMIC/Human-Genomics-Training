@@ -1,0 +1,109 @@
+Nov-09 21:26:46.135 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile modules,local -w /tmp/work
+Nov-09 21:26:46.287 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.10.5
+Nov-09 21:26:46.336 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/mnt/users/d/da/david/.nextflow/plugins; core-plugins: nf-agent-pi@0.6.0,nf-agent@0.2.0,nf-amazon@3.12.1,nf-azure@1.24.3,nf-cloudcache@0.6.2,nf-codecommit@0.6.1,nf-console@1.3.1,nf-google@1.29.1,nf-k8s@1.6.2,nf-seqera@0.26.2,nf-tower@1.32.2,nf-wave@1.22.5
+Nov-09 21:26:46.379 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-09 21:26:46.381 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-09 21:26:46.388 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Nov-09 21:26:46.418 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Nov-09 21:26:46.683 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Nov-09 21:26:46.694 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-09 21:26:46.740 [main] DEBUG nextflow.config.ConfigCmdAdapter - Found config local: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/nextflow.config
+Nov-09 21:26:46.747 [main] DEBUG nextflow.config.ConfigCmdAdapter - Parsing config file: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/nextflow.config
+Nov-09 21:26:46.753 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Nov-09 21:26:46.772 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `modules,local`
+Nov-09 21:26:47.679 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [modules, local, slurm]
+Nov-09 21:26:47.716 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-09 21:26:47.717 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-09 21:26:47.751 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /mnt/users/d/da/david/.nextflow/secrets/store.json
+Nov-09 21:26:47.756 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [LocalSecretsProvider] - activable => LocalSecretsProvider
+Nov-09 21:26:47.785 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [high_turing] - revision: 211d77d056
+Nov-09 21:26:48.001 [main] DEBUG nextflow.Session - Session UUID: 63e7e459-a70f-4b32-90dc-7753f3744756
+Nov-09 21:26:48.002 [main] DEBUG nextflow.Session - Run name: high_turing
+Nov-09 21:26:48.003 [main] DEBUG nextflow.Session - Executor pool size: 32
+Nov-09 21:26:48.021 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-09 21:26:48.034 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-09 21:26:48.072 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.10.5 build 14654
+  Created: 02-11-2026 17:37 UTC (20:37 EAST)
+  System: Linux 3.16.0-77-generic
+  Runtime: Groovy 4.0.33 on OpenJDK 64-Bit Server VM 17.0.2+8-86
+  Encoding: UTF-8 (ANSI_X3.4-1968)
+  Process: 10840@dc2c1b11 [127.0.1.1]
+  CPUs: 32 - Mem: 251.9 GB (248.7 GB) - Swap: 256 GB (256 GB)
+Nov-09 21:26:48.101 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-09 21:26:48.119 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
+Nov-09 21:26:48.272 [main] DEBUG nextflow.Session - Work-dir: /tmp/work [ext2/ext3]
+Nov-09 21:26:48.274 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/bin
+Nov-09 21:26:48.307 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[K8sExecutor]
+Nov-09 21:26:48.338 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Nov-09 21:26:48.343 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Nov-09 21:26:48.429 [main] DEBUG nextflow.Session - Session start
+Nov-09 21:26:48.441 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Nov-09 21:26:49.747 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-09 21:26:50.237 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-09 21:26:50.238 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-09 21:26:50.252 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-09 21:26:50.265 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=32; memory=251.9 GB; capacity=32; pollInterval=100ms; dumpInterval=5m
+Nov-09 21:26:50.281 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Nov-09 21:26:50.397 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ALIGNMENT': maxForks=0; fair=false; array=0
+Nov-09 21:26:50.481 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-09 21:26:50.482 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-09 21:26:50.485 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'VARIANT_CALLING': maxForks=0; fair=false; array=0
+Nov-09 21:26:50.531 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-09 21:26:50.532 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-09 21:26:50.534 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'JOINT_COMBINE': maxForks=0; fair=false; array=0
+Nov-09 21:26:50.547 [main] DEBUG nextflow.Session - Process names: VARIANT_CALLING, JOINT_COMBINE, ALIGNMENT, JOINT_GENOMICSDB
+Nov-09 21:26:50.552 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Nov-09 21:26:50.564 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ALIGNMENT
+Nov-09 21:26:50.566 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > VARIANT_CALLING
+Nov-09 21:26:50.566 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > JOINT_COMBINE
+Nov-09 21:26:50.568 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  _nf_script_e4dd9cf253001cf9: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/modules/alignment.nf
+  Main: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/main.nf
+  _nf_script_82b4db7f3255d3af: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/modules/variant_calling.nf
+Nov-09 21:26:50.568 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-09 21:26:50.568 [main] DEBUG nextflow.Session - Session await
+Nov-09 21:26:51.391 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:26:51.397 [Task submitter] INFO  nextflow.Session - [93/1c8016] Submitted process > ALIGNMENT (HG02703)
+Nov-09 21:26:51.440 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:26:51.442 [Task submitter] INFO  nextflow.Session - [48/e59b4f] Submitted process > ALIGNMENT (HG02678)
+Nov-09 21:26:51.474 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:26:51.476 [Task submitter] INFO  nextflow.Session - [91/5ddd89] Submitted process > ALIGNMENT (HG02562)
+Nov-09 21:26:51.502 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:26:51.504 [Task submitter] INFO  nextflow.Session - [dd/f713f0] Submitted process > ALIGNMENT (HG02585)
+Nov-09 21:26:51.533 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:26:51.535 [Task submitter] INFO  nextflow.Session - [3a/834d86] Submitted process > ALIGNMENT (HG02573)
+Nov-09 21:26:51.589 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: ALIGNMENT (HG02703); status: COMPLETED; exit: 1; error: -; workDir: /tmp/work/93/1c80164dc0b6b0db6bf72b02389569]
+Nov-09 21:26:51.592 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-09 21:26:51.598 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: ALIGNMENT (HG02678); status: COMPLETED; exit: 1; error: -; workDir: /tmp/work/48/e59b4f0fea156690b2495c43c005ec]
+Nov-09 21:26:51.600 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: ALIGNMENT (HG02562); status: COMPLETED; exit: 1; error: -; workDir: /tmp/work/91/5ddd89a370f70489d9eab8dc68f40c]
+Nov-09 21:26:51.605 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: ALIGNMENT (HG02585); status: COMPLETED; exit: 1; error: -; workDir: /tmp/work/dd/f713f0ea7132f3d6abc48a7e6c0115]
+Nov-09 21:26:51.618 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ALIGNMENT (HG02585); work-dir=/tmp/work/dd/f713f0ea7132f3d6abc48a7e6c0115
+  error [nextflow.exception.ProcessFailedException]: Process `ALIGNMENT (HG02585)` terminated with an error exit status (1)
+Nov-09 21:26:51.626 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: ALIGNMENT (HG02573); status: COMPLETED; exit: 1; error: -; workDir: /tmp/work/3a/834d8609b762fe57163e500a6d16fe]
+Nov-09 21:26:51.635 [TaskFinalizer-4] INFO  nextflow.processor.TaskProcessor - [dd/f713f0] NOTE: Process `ALIGNMENT (HG02585)` terminated with an error exit status (1) -- Error is ignored
+Nov-09 21:26:51.639 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ALIGNMENT (HG02573); work-dir=/tmp/work/3a/834d8609b762fe57163e500a6d16fe
+  error [nextflow.exception.ProcessFailedException]: Process `ALIGNMENT (HG02573)` terminated with an error exit status (1)
+Nov-09 21:26:51.641 [TaskFinalizer-5] INFO  nextflow.processor.TaskProcessor - [3a/834d86] NOTE: Process `ALIGNMENT (HG02573)` terminated with an error exit status (1) -- Error is ignored
+Nov-09 21:26:51.642 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ALIGNMENT (HG02678); work-dir=/tmp/work/48/e59b4f0fea156690b2495c43c005ec
+  error [nextflow.exception.ProcessFailedException]: Process `ALIGNMENT (HG02678)` terminated with an error exit status (1)
+Nov-09 21:26:51.644 [TaskFinalizer-2] INFO  nextflow.processor.TaskProcessor - [48/e59b4f] NOTE: Process `ALIGNMENT (HG02678)` terminated with an error exit status (1) -- Error is ignored
+Nov-09 21:26:51.644 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ALIGNMENT (HG02703); work-dir=/tmp/work/93/1c80164dc0b6b0db6bf72b02389569
+  error [nextflow.exception.ProcessFailedException]: Process `ALIGNMENT (HG02703)` terminated with an error exit status (1)
+Nov-09 21:26:51.645 [TaskFinalizer-1] INFO  nextflow.processor.TaskProcessor - [93/1c8016] NOTE: Process `ALIGNMENT (HG02703)` terminated with an error exit status (1) -- Error is ignored
+Nov-09 21:26:51.646 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ALIGNMENT (HG02562); work-dir=/tmp/work/91/5ddd89a370f70489d9eab8dc68f40c
+  error [nextflow.exception.ProcessFailedException]: Process `ALIGNMENT (HG02562)` terminated with an error exit status (1)
+Nov-09 21:26:51.650 [TaskFinalizer-3] INFO  nextflow.processor.TaskProcessor - [91/5ddd89] NOTE: Process `ALIGNMENT (HG02562)` terminated with an error exit status (1) -- Error is ignored
+Nov-09 21:26:51.662 [main] DEBUG nextflow.Session - Session await > all processes finished
+Nov-09 21:26:51.723 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Nov-09 21:26:51.724 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-09 21:26:51.730 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Nov-09 21:26:51.746 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=5; ignoredCount=5; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=546ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=5; peakCpus=10; peakMemory=50 GB; ]
+Nov-09 21:26:51.955 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Nov-09 21:26:51.978 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Nov-09 21:26:51.980 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

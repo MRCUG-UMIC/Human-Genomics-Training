@@ -1,0 +1,3 @@
+2026-11-09 13:37:43	-	irreverent_euler	-	33c0b1d50e58234b887453eea5cfa114	25c8340a-9088-4eb0-ace1-2e02446da92d	nextflow run main.nf -profile modules,local --joint_method combine -w /tmp/david/work
+2026-11-09 21:24:53	-	cheesy_yonath	-	211d77d056bcc74be3f80e29d56d3cba	9091bf42-7be0-4872-9a97-8d006744c7d5	nextflow run main.nf -profile modules,local
+2026-11-09 21:25:22	-	adoring_curran	-	211d77d056bcc74be3f80e29d56d3cba	bed2fad2-7867-4a6e-afeb-ea9f3d2e286e	nextflow run main.nf -profile modules,local -w /tmp/work

@@ -1,0 +1,188 @@
+Nov-09 21:58:45.030 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile modules,local -w /tmp/work -resume
+Nov-09 21:58:45.228 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.10.5
+Nov-09 21:58:45.278 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/mnt/users/d/da/david/.nextflow/plugins; core-plugins: nf-agent-pi@0.6.0,nf-agent@0.2.0,nf-amazon@3.12.1,nf-azure@1.24.3,nf-cloudcache@0.6.2,nf-codecommit@0.6.1,nf-console@1.3.1,nf-google@1.29.1,nf-k8s@1.6.2,nf-seqera@0.26.2,nf-tower@1.32.2,nf-wave@1.22.5
+Nov-09 21:58:45.322 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-09 21:58:45.324 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-09 21:58:45.330 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Nov-09 21:58:45.361 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Nov-09 21:58:45.631 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Nov-09 21:58:45.641 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-09 21:58:45.687 [main] DEBUG nextflow.config.ConfigCmdAdapter - Found config local: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/nextflow.config
+Nov-09 21:58:45.693 [main] DEBUG nextflow.config.ConfigCmdAdapter - Parsing config file: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/nextflow.config
+Nov-09 21:58:45.699 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Nov-09 21:58:45.716 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `modules,local`
+Nov-09 21:58:46.668 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [modules, local, slurm]
+Nov-09 21:58:46.709 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-09 21:58:46.711 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-09 21:58:46.743 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /mnt/users/d/da/david/.nextflow/secrets/store.json
+Nov-09 21:58:46.748 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [LocalSecretsProvider] - activable => LocalSecretsProvider
+Nov-09 21:58:46.779 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [drunk_ramanujan] - revision: 6b82a9539b
+Nov-09 21:58:47.001 [main] DEBUG nextflow.Session - Session UUID: 83b3fb32-b4b8-4443-a54b-21a2a29f42b9
+Nov-09 21:58:47.002 [main] DEBUG nextflow.Session - Run name: drunk_ramanujan
+Nov-09 21:58:47.003 [main] DEBUG nextflow.Session - Executor pool size: 32
+Nov-09 21:58:47.023 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-09 21:58:47.034 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-09 21:58:47.074 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.10.5 build 14654
+  Created: 02-11-2026 17:37 UTC (20:37 EAST)
+  System: Linux 3.16.0-77-generic
+  Runtime: Groovy 4.0.33 on OpenJDK 64-Bit Server VM 17.0.2+8-86
+  Encoding: UTF-8 (ANSI_X3.4-1968)
+  Process: 11919@dc2c1b11 [127.0.1.1]
+  CPUs: 32 - Mem: 251.9 GB (242.8 GB) - Swap: 256 GB (256 GB)
+Nov-09 21:58:47.110 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-09 21:58:47.129 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
+Nov-09 21:58:47.273 [main] DEBUG nextflow.Session - Work-dir: /tmp/work [ext2/ext3]
+Nov-09 21:58:47.274 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/bin
+Nov-09 21:58:47.301 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[K8sExecutor]
+Nov-09 21:58:47.322 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Nov-09 21:58:47.325 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Nov-09 21:58:47.409 [main] DEBUG nextflow.Session - Session start
+Nov-09 21:58:47.423 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Nov-09 21:58:49.061 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-09 21:58:49.640 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:ALIGNMENT` matches process ALIGNMENT
+Nov-09 21:58:49.651 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-09 21:58:49.652 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-09 21:58:49.666 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-09 21:58:49.682 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=32; memory=251.9 GB; capacity=32; pollInterval=100ms; dumpInterval=5m
+Nov-09 21:58:49.699 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Nov-09 21:58:49.767 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ALIGNMENT': maxForks=0; fair=false; array=0
+Nov-09 21:58:49.838 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:SORT_BAM` matches process SORT_BAM
+Nov-09 21:58:49.844 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-09 21:58:49.845 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-09 21:58:49.848 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SORT_BAM': maxForks=0; fair=false; array=0
+Nov-09 21:58:49.863 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:MARK_DUPLICATES` matches process MARK_DUPLICATES
+Nov-09 21:58:49.868 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-09 21:58:49.868 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-09 21:58:49.870 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MARK_DUPLICATES': maxForks=0; fair=false; array=0
+Nov-09 21:58:49.888 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:BASE_RECALIBRATOR` matches process BASE_RECALIBRATOR
+Nov-09 21:58:49.893 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-09 21:58:49.893 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-09 21:58:49.896 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BASE_RECALIBRATOR': maxForks=0; fair=false; array=0
+Nov-09 21:58:49.917 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:APPLY_BQSR` matches process APPLY_BQSR
+Nov-09 21:58:49.920 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-09 21:58:49.921 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-09 21:58:49.923 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'APPLY_BQSR': maxForks=0; fair=false; array=0
+Nov-09 21:58:49.939 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-09 21:58:49.939 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-09 21:58:49.949 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'VARIANT_CALLING': maxForks=0; fair=false; array=0
+Nov-09 21:58:50.001 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-09 21:58:50.001 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-09 21:58:50.003 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'JOINT_COMBINE': maxForks=0; fair=false; array=0
+Nov-09 21:58:50.014 [main] DEBUG nextflow.Session - Process names: VARIANT_CALLING, JOINT_COMBINE, ALIGNMENT, APPLY_BQSR, BASE_RECALIBRATOR, SORT_BAM, JOINT_GENOMICSDB, MARK_DUPLICATES
+Nov-09 21:58:50.021 [main] DEBUG nextflow.Session - Igniting dataflow network (9)
+Nov-09 21:58:50.033 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ALIGNMENT
+Nov-09 21:58:50.034 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SORT_BAM
+Nov-09 21:58:50.035 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MARK_DUPLICATES
+Nov-09 21:58:50.036 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BASE_RECALIBRATOR
+Nov-09 21:58:50.037 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > APPLY_BQSR
+Nov-09 21:58:50.038 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > VARIANT_CALLING
+Nov-09 21:58:50.039 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > JOINT_COMBINE
+Nov-09 21:58:50.040 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Main: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/main.nf
+  _nf_script_e4dd9cf253001cf9: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/modules/alignment.nf
+  _nf_script_82b4db7f3255d3af: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/modules/variant_calling.nf
+Nov-09 21:58:50.041 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-09 21:58:50.041 [main] DEBUG nextflow.Session - Session await
+Nov-09 21:58:50.445 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [88/6e2bbf] Cached process > ALIGNMENT (HG02585)
+Nov-09 21:58:50.572 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:58:50.577 [Task submitter] INFO  nextflow.Session - [fb/204261] Submitted process > ALIGNMENT (HG02678)
+Nov-09 21:58:50.626 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:58:50.628 [Task submitter] INFO  nextflow.Session - [cb/c78ab5] Submitted process > ALIGNMENT (HG02573)
+Nov-09 21:58:50.659 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:58:50.661 [Task submitter] INFO  nextflow.Session - [07/dc02f5] Submitted process > ALIGNMENT (HG02703)
+Nov-09 21:58:50.692 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:58:50.694 [Task submitter] INFO  nextflow.Session - [96/31745d] Submitted process > ALIGNMENT (HG02562)
+Nov-09 21:58:50.730 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:58:50.732 [Task submitter] INFO  nextflow.Session - [42/e268bf] Submitted process > SORT_BAM (HG02585)
+Nov-09 21:58:51.419 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: SORT_BAM (HG02585); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/42/e268bff364e297067900e025d6245c]
+Nov-09 21:58:51.422 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-09 21:58:51.477 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:58:51.479 [Task submitter] INFO  nextflow.Session - [9e/6eea70] Submitted process > MARK_DUPLICATES (HG02585)
+Nov-09 21:59:02.608 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: MARK_DUPLICATES (HG02585); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/9e/6eea70fea1de9b5781bda1cea7f2e1]
+Nov-09 21:59:02.655 [TaskFinalizer-2] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-09 21:59:02.973 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:02.974 [Task submitter] INFO  nextflow.Session - [6e/6fc5d7] Submitted process > BASE_RECALIBRATOR (HG02585)
+Nov-09 21:59:11.108 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: ALIGNMENT (HG02678); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/fb/20426135b9948a836a8a2b2f98b955]
+Nov-09 21:59:11.149 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:11.150 [Task submitter] INFO  nextflow.Session - [a7/e8e958] Submitted process > SORT_BAM (HG02678)
+Nov-09 21:59:11.470 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: ALIGNMENT (HG02703); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/07/dc02f598d19e2f2565ada22f44723a]
+Nov-09 21:59:11.506 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:11.507 [Task submitter] INFO  nextflow.Session - [a8/78457a] Submitted process > SORT_BAM (HG02703)
+Nov-09 21:59:11.844 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: SORT_BAM (HG02678); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/a7/e8e9584448cf8a42d6537deaac4f08]
+Nov-09 21:59:11.894 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: BASE_RECALIBRATOR (HG02585); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/6e/6fc5d70f3bc81bd43e7145a6bc3fc4]
+Nov-09 21:59:11.906 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:11.908 [Task submitter] INFO  nextflow.Session - [ef/1a378d] Submitted process > MARK_DUPLICATES (HG02678)
+Nov-09 21:59:11.942 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:11.943 [Task submitter] INFO  nextflow.Session - [01/598186] Submitted process > APPLY_BQSR (HG02585)
+Nov-09 21:59:12.178 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: SORT_BAM (HG02703); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/a8/78457a16ba8603c24765072dabc32d]
+Nov-09 21:59:12.204 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:12.205 [Task submitter] INFO  nextflow.Session - [73/cc4f46] Submitted process > MARK_DUPLICATES (HG02703)
+Nov-09 21:59:13.791 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: ALIGNMENT (HG02562); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/96/31745d7abb2217c557ec1f1984c98b]
+Nov-09 21:59:13.817 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:13.818 [Task submitter] INFO  nextflow.Session - [7b/1e9cb7] Submitted process > SORT_BAM (HG02562)
+Nov-09 21:59:14.654 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: SORT_BAM (HG02562); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/7b/1e9cb77a6d7f1053e03052fa9f64c5]
+Nov-09 21:59:14.681 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:14.682 [Task submitter] INFO  nextflow.Session - [1b/30c56b] Submitted process > MARK_DUPLICATES (HG02562)
+Nov-09 21:59:16.082 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: ALIGNMENT (HG02573); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/cb/c78ab5a8b0038cc1c747ca15d5e71e]
+Nov-09 21:59:16.158 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:16.159 [Task submitter] INFO  nextflow.Session - [dc/aac088] Submitted process > SORT_BAM (HG02573)
+Nov-09 21:59:17.109 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: SORT_BAM (HG02573); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/dc/aac0884bb7af377f27a8a61b1a6444]
+Nov-09 21:59:17.153 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:17.156 [Task submitter] INFO  nextflow.Session - [65/7f2c2f] Submitted process > MARK_DUPLICATES (HG02573)
+Nov-09 21:59:20.191 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: APPLY_BQSR (HG02585); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/01/598186090004ae2b65447a0c962d83]
+Nov-09 21:59:20.241 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:20.243 [Task submitter] INFO  nextflow.Session - [cb/609e6d] Submitted process > VARIANT_CALLING (HG02585)
+Nov-09 21:59:23.946 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: MARK_DUPLICATES (HG02678); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/ef/1a378da9f6e9d3ed6a4257681ced32]
+Nov-09 21:59:24.060 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:24.062 [Task submitter] INFO  nextflow.Session - [38/23c143] Submitted process > BASE_RECALIBRATOR (HG02678)
+Nov-09 21:59:24.295 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: MARK_DUPLICATES (HG02703); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/73/cc4f46a4dc49e7f5cc4c9a5e2a2688]
+Nov-09 21:59:24.348 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:24.350 [Task submitter] INFO  nextflow.Session - [3d/0a3913] Submitted process > BASE_RECALIBRATOR (HG02703)
+Nov-09 21:59:26.147 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: MARK_DUPLICATES (HG02562); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/1b/30c56b35a8f1b01fbec23a6452da6e]
+Nov-09 21:59:26.180 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:26.181 [Task submitter] INFO  nextflow.Session - [93/08b7db] Submitted process > BASE_RECALIBRATOR (HG02562)
+Nov-09 21:59:29.274 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: MARK_DUPLICATES (HG02573); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/65/7f2c2f1904c9111a3f1de0362ef554]
+Nov-09 21:59:29.312 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:29.313 [Task submitter] INFO  nextflow.Session - [14/dadb2a] Submitted process > BASE_RECALIBRATOR (HG02573)
+Nov-09 21:59:35.914 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: BASE_RECALIBRATOR (HG02703); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/3d/0a3913b7ce0c9d662efe7ec19cca88]
+Nov-09 21:59:35.962 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: BASE_RECALIBRATOR (HG02678); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/38/23c143622a7b28dab84525ad13ab87]
+Nov-09 21:59:35.979 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:35.980 [Task submitter] INFO  nextflow.Session - [cd/3e694a] Submitted process > APPLY_BQSR (HG02703)
+Nov-09 21:59:36.001 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:36.003 [Task submitter] INFO  nextflow.Session - [3b/1b1812] Submitted process > APPLY_BQSR (HG02678)
+Nov-09 21:59:37.998 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: BASE_RECALIBRATOR (HG02562); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/93/08b7dbeba83e0f008e1df770fef0c7]
+Nov-09 21:59:38.038 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:38.040 [Task submitter] INFO  nextflow.Session - [86/285e8c] Submitted process > APPLY_BQSR (HG02562)
+Nov-09 21:59:40.214 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: VARIANT_CALLING (HG02585); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/cb/609e6d791d633c4791b88cf71e7186]
+Nov-09 21:59:40.521 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: BASE_RECALIBRATOR (HG02573); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/14/dadb2a404a8c776a75c5069c8c0e42]
+Nov-09 21:59:40.554 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:40.555 [Task submitter] INFO  nextflow.Session - [49/1575d9] Submitted process > APPLY_BQSR (HG02573)
+Nov-09 21:59:44.581 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: APPLY_BQSR (HG02703); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/cd/3e694a86e11f6005d84e64d6052879]
+Nov-09 21:59:44.614 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:44.615 [Task submitter] INFO  nextflow.Session - [ae/ad5e90] Submitted process > VARIANT_CALLING (HG02703)
+Nov-09 21:59:45.036 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: APPLY_BQSR (HG02678); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/3b/1b181222ac2c5c5d35a3654f30096a]
+Nov-09 21:59:45.069 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:45.070 [Task submitter] INFO  nextflow.Session - [86/c6ca6b] Submitted process > VARIANT_CALLING (HG02678)
+Nov-09 21:59:47.473 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: APPLY_BQSR (HG02562); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/86/285e8cdae1417d9a78f166b865266f]
+Nov-09 21:59:47.505 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:47.506 [Task submitter] INFO  nextflow.Session - [96/460f0f] Submitted process > VARIANT_CALLING (HG02562)
+Nov-09 21:59:49.533 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: APPLY_BQSR (HG02573); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/49/1575d9aa1760e857be6326a8ecb330]
+Nov-09 21:59:49.585 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 21:59:49.587 [Task submitter] INFO  nextflow.Session - [fe/67b30b] Submitted process > VARIANT_CALLING (HG02573)
+Nov-09 22:00:03.006 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: VARIANT_CALLING (HG02678); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/86/c6ca6b92207e24c251b5c77c261bdf]
+Nov-09 22:00:06.859 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: VARIANT_CALLING (HG02703); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/ae/ad5e9072aa69a58e6b954fb28a9a4c]
+Nov-09 22:00:07.215 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: VARIANT_CALLING (HG02562); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/96/460f0f5667aff667a7f7724bbd8b7c]
+Nov-09 22:00:08.526 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: VARIANT_CALLING (HG02573); status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/fe/67b30bad3577bc60dbc56e61fa269e]
+Nov-09 22:00:08.583 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-09 22:00:08.584 [Task submitter] INFO  nextflow.Session - [13/a06290] Submitted process > JOINT_COMBINE
+Nov-09 22:02:12.756 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: JOINT_COMBINE; status: COMPLETED; exit: 0; error: -; workDir: /tmp/work/13/a06290f8c38d6f80d1d44898887f30]
+Nov-09 22:02:12.775 [main] DEBUG nextflow.Session - Session await > all processes finished
+Nov-09 22:02:12.856 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Nov-09 22:02:12.856 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-09 22:02:12.863 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Nov-09 22:02:12.865 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Nov-09 22:02:12.883 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=30; failedCount=0; ignoredCount=0; cachedCount=1; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=15m 47s; failedDuration=0ms; cachedDuration=38.3s;loadCpus=0; loadMemory=0; peakRunning=5; peakCpus=10; peakMemory=80 GB; ]
+Nov-09 22:02:13.015 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Nov-09 22:02:13.028 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Nov-09 22:02:13.029 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

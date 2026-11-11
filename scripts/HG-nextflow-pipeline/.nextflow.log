@@ -1,0 +1,216 @@
+Nov-09 22:41:44.300 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile modules,slurm -w /tmp/work
+Nov-09 22:41:44.511 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.10.5
+Nov-09 22:41:44.560 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/mnt/users/d/da/david/.nextflow/plugins; core-plugins: nf-agent-pi@0.6.0,nf-agent@0.2.0,nf-amazon@3.12.1,nf-azure@1.24.3,nf-cloudcache@0.6.2,nf-codecommit@0.6.1,nf-console@1.3.1,nf-google@1.29.1,nf-k8s@1.6.2,nf-seqera@0.26.2,nf-tower@1.32.2,nf-wave@1.22.5
+Nov-09 22:41:44.603 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-09 22:41:44.606 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-09 22:41:44.612 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Nov-09 22:41:44.641 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Nov-09 22:41:44.904 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Nov-09 22:41:44.915 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-09 22:41:44.961 [main] DEBUG nextflow.config.ConfigCmdAdapter - Found config local: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/nextflow.config
+Nov-09 22:41:44.967 [main] DEBUG nextflow.config.ConfigCmdAdapter - Parsing config file: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/nextflow.config
+Nov-09 22:41:44.973 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Nov-09 22:41:44.990 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `modules,slurm`
+Nov-09 22:41:45.946 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [modules, local, slurm]
+Nov-09 22:41:45.982 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-09 22:41:45.983 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-09 22:41:46.019 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /mnt/users/d/da/david/.nextflow/secrets/store.json
+Nov-09 22:41:46.025 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [LocalSecretsProvider] - activable => LocalSecretsProvider
+Nov-09 22:41:46.057 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [confident_ptolemy] - revision: 6b82a9539b
+Nov-09 22:41:46.305 [main] DEBUG nextflow.Session - Session UUID: 23774bbb-d46c-440d-8ecf-2ddf41294e42
+Nov-09 22:41:46.306 [main] DEBUG nextflow.Session - Run name: confident_ptolemy
+Nov-09 22:41:46.307 [main] DEBUG nextflow.Session - Executor pool size: 32
+Nov-09 22:41:46.326 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-09 22:41:46.339 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-09 22:41:46.387 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.10.5 build 14654
+  Created: 02-11-2026 17:37 UTC (20:37 EAST)
+  System: Linux 3.16.0-77-generic
+  Runtime: Groovy 4.0.33 on OpenJDK 64-Bit Server VM 17.0.2+8-86
+  Encoding: UTF-8 (ANSI_X3.4-1968)
+  Process: 15398@dc2c1b11 [127.0.1.1]
+  CPUs: 32 - Mem: 251.9 GB (242.6 GB) - Swap: 256 GB (256 GB)
+Nov-09 22:41:46.411 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-09 22:41:46.431 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 33; maxThreads: 1000
+Nov-09 22:41:46.549 [main] DEBUG nextflow.Session - Work-dir: /tmp/work [ext2/ext3]
+Nov-09 22:41:46.551 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/bin
+Nov-09 22:41:46.579 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[K8sExecutor]
+Nov-09 22:41:46.604 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Nov-09 22:41:46.607 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Nov-09 22:41:46.689 [main] DEBUG nextflow.Session - Session start
+Nov-09 22:41:46.702 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Nov-09 22:41:48.226 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-09 22:41:48.835 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:ALIGNMENT` matches process ALIGNMENT
+Nov-09 22:41:48.847 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:41:48.848 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:41:48.869 [main] DEBUG nextflow.executor.Executor - [warm up] executor > slurm
+Nov-09 22:41:48.885 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'slurm' > capacity: 100; pollInterval: 5s; dumpInterval: 5m; resources: unlimited
+Nov-09 22:41:48.889 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: slurm)
+Nov-09 22:41:48.894 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'slurm' > queue-stat-interval: 1m
+Nov-09 22:41:48.958 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ALIGNMENT': maxForks=0; fair=false; array=0
+Nov-09 22:41:49.033 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:SORT_BAM` matches process SORT_BAM
+Nov-09 22:41:49.037 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:41:49.037 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:41:49.039 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'SORT_BAM': maxForks=0; fair=false; array=0
+Nov-09 22:41:49.051 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:MARK_DUPLICATES` matches process MARK_DUPLICATES
+Nov-09 22:41:49.055 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:41:49.055 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:41:49.056 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MARK_DUPLICATES': maxForks=0; fair=false; array=0
+Nov-09 22:41:49.070 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:BASE_RECALIBRATOR` matches process BASE_RECALIBRATOR
+Nov-09 22:41:49.075 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:41:49.075 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:41:49.077 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'BASE_RECALIBRATOR': maxForks=0; fair=false; array=0
+Nov-09 22:41:49.093 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withName:APPLY_BQSR` matches process APPLY_BQSR
+Nov-09 22:41:49.097 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:41:49.097 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:41:49.099 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'APPLY_BQSR': maxForks=0; fair=false; array=0
+Nov-09 22:41:49.113 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:41:49.113 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:41:49.114 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'VARIANT_CALLING': maxForks=0; fair=false; array=0
+Nov-09 22:41:49.148 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: slurm
+Nov-09 22:41:49.148 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'slurm'
+Nov-09 22:41:49.150 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'JOINT_COMBINE': maxForks=0; fair=false; array=0
+Nov-09 22:41:49.158 [main] DEBUG nextflow.Session - Process names: VARIANT_CALLING, JOINT_COMBINE, ALIGNMENT, APPLY_BQSR, BASE_RECALIBRATOR, SORT_BAM, JOINT_GENOMICSDB, MARK_DUPLICATES
+Nov-09 22:41:49.165 [main] DEBUG nextflow.Session - Igniting dataflow network (9)
+Nov-09 22:41:49.176 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ALIGNMENT
+Nov-09 22:41:49.178 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SORT_BAM
+Nov-09 22:41:49.178 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MARK_DUPLICATES
+Nov-09 22:41:49.179 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BASE_RECALIBRATOR
+Nov-09 22:41:49.179 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > APPLY_BQSR
+Nov-09 22:41:49.180 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > VARIANT_CALLING
+Nov-09 22:41:49.181 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > JOINT_COMBINE
+Nov-09 22:41:49.182 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Main: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/main.nf
+  _nf_script_e4dd9cf253001cf9: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/modules/alignment.nf
+  _nf_script_82b4db7f3255d3af: /mnt/roche/david/hg-training/HG-nextflow-pipeline2/modules/variant_calling.nf
+Nov-09 22:41:49.183 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-09 22:41:49.183 [main] DEBUG nextflow.Session - Session await
+Nov-09 22:41:49.623 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process ALIGNMENT (HG02573) > jobId: 49143; workDir: /tmp/work/3a/8bf48dc7d4fe78e58ccfc10ff22608
+Nov-09 22:41:49.624 [Task submitter] INFO  nextflow.Session - [3a/8bf48d] Submitted process > ALIGNMENT (HG02573)
+Nov-09 22:41:49.708 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process ALIGNMENT (HG02703) > jobId: 49144; workDir: /tmp/work/f7/ede7eab103be956b7ed2b180c9cc53
+Nov-09 22:41:49.709 [Task submitter] INFO  nextflow.Session - [f7/ede7ea] Submitted process > ALIGNMENT (HG02703)
+Nov-09 22:41:49.778 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process ALIGNMENT (HG02562) > jobId: 49145; workDir: /tmp/work/c8/91a26e81e30a4240992b02c9b15274
+Nov-09 22:41:49.779 [Task submitter] INFO  nextflow.Session - [c8/91a26e] Submitted process > ALIGNMENT (HG02562)
+Nov-09 22:41:49.852 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process ALIGNMENT (HG02678) > jobId: 49146; workDir: /tmp/work/bf/916de063f0cf3eff2ec56a70dd1a32
+Nov-09 22:41:49.853 [Task submitter] INFO  nextflow.Session - [bf/916de0] Submitted process > ALIGNMENT (HG02678)
+Nov-09 22:41:49.928 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [SLURM] submitted process ALIGNMENT (HG02585) > jobId: 49147; workDir: /tmp/work/b0/c30d5c0a7261dec79019ad8788262e
+Nov-09 22:41:49.930 [Task submitter] INFO  nextflow.Session - [b0/c30d5c] Submitted process > ALIGNMENT (HG02585)
+Nov-09 22:46:53.919 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 5 -- submitted tasks are shown below
+~> TaskHandler[jobId: 49143; id: 2; name: ALIGNMENT (HG02573); status: RUNNING; exit: -; error: -; workDir: /tmp/work/3a/8bf48dc7d4fe78e58ccfc10ff22608 started: 1794253313954; exited: -; ]
+~> TaskHandler[jobId: 49144; id: 5; name: ALIGNMENT (HG02703); status: RUNNING; exit: -; error: -; workDir: /tmp/work/f7/ede7eab103be956b7ed2b180c9cc53 started: 1794253313962; exited: -; ]
+~> TaskHandler[jobId: 49145; id: 1; name: ALIGNMENT (HG02562); status: RUNNING; exit: -; error: -; workDir: /tmp/work/c8/91a26e81e30a4240992b02c9b15274 started: 1794253313966; exited: -; ]
+~> TaskHandler[jobId: 49146; id: 4; name: ALIGNMENT (HG02678); status: RUNNING; exit: -; error: -; workDir: /tmp/work/bf/916de063f0cf3eff2ec56a70dd1a32 started: 1794253313968; exited: -; ]
+~> TaskHandler[jobId: 49147; id: 3; name: ALIGNMENT (HG02585); status: RUNNING; exit: -; error: -; workDir: /tmp/work/b0/c30d5c0a7261dec79019ad8788262e started: 1794253313969; exited: -; ]
+Nov-09 22:51:53.932 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 5 -- submitted tasks are shown below
+~> TaskHandler[jobId: 49143; id: 2; name: ALIGNMENT (HG02573); status: RUNNING; exit: -; error: -; workDir: /tmp/work/3a/8bf48dc7d4fe78e58ccfc10ff22608 started: 1794253313954; exited: -; ]
+~> TaskHandler[jobId: 49144; id: 5; name: ALIGNMENT (HG02703); status: RUNNING; exit: -; error: -; workDir: /tmp/work/f7/ede7eab103be956b7ed2b180c9cc53 started: 1794253313962; exited: -; ]
+~> TaskHandler[jobId: 49145; id: 1; name: ALIGNMENT (HG02562); status: RUNNING; exit: -; error: -; workDir: /tmp/work/c8/91a26e81e30a4240992b02c9b15274 started: 1794253313966; exited: -; ]
+~> TaskHandler[jobId: 49146; id: 4; name: ALIGNMENT (HG02678); status: RUNNING; exit: -; error: -; workDir: /tmp/work/bf/916de063f0cf3eff2ec56a70dd1a32 started: 1794253313968; exited: -; ]
+~> TaskHandler[jobId: 49147; id: 3; name: ALIGNMENT (HG02585); status: RUNNING; exit: -; error: -; workDir: /tmp/work/b0/c30d5c0a7261dec79019ad8788262e started: 1794253313969; exited: -; ]
+Nov-09 22:56:53.940 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > tasks to be completed: 5 -- submitted tasks are shown below
+~> TaskHandler[jobId: 49143; id: 2; name: ALIGNMENT (HG02573); status: RUNNING; exit: -; error: -; workDir: /tmp/work/3a/8bf48dc7d4fe78e58ccfc10ff22608 started: 1794253313954; exited: -; ]
+~> TaskHandler[jobId: 49144; id: 5; name: ALIGNMENT (HG02703); status: RUNNING; exit: -; error: -; workDir: /tmp/work/f7/ede7eab103be956b7ed2b180c9cc53 started: 1794253313962; exited: -; ]
+~> TaskHandler[jobId: 49145; id: 1; name: ALIGNMENT (HG02562); status: RUNNING; exit: -; error: -; workDir: /tmp/work/c8/91a26e81e30a4240992b02c9b15274 started: 1794253313966; exited: -; ]
+~> TaskHandler[jobId: 49146; id: 4; name: ALIGNMENT (HG02678); status: RUNNING; exit: -; error: -; workDir: /tmp/work/bf/916de063f0cf3eff2ec56a70dd1a32 started: 1794253313968; exited: -; ]
+~> TaskHandler[jobId: 49147; id: 3; name: ALIGNMENT (HG02585); status: RUNNING; exit: -; error: -; workDir: /tmp/work/b0/c30d5c0a7261dec79019ad8788262e started: 1794253313969; exited: -; ]
+Nov-09 22:57:18.943 [Task monitor] DEBUG nextflow.file.FileHelper - FS path type (false): /tmp/work
+Nov-09 23:01:48.954 [Task monitor] DEBUG nextflow.executor.GridTaskHandler - Failed to get exit status for process TaskHandler[jobId: 49143; id: 2; name: ALIGNMENT (HG02573); status: RUNNING; exit: -; error: -; workDir: /tmp/work/3a/8bf48dc7d4fe78e58ccfc10ff22608 started: 1794253313954; exited: -; ] -- exitStatusReadTimeoutMillis: 270000; delta: 274952
+Current queue status:
+>   job:  49143: ERROR
+>   job:  49144: ERROR
+>   job:  49145: ERROR
+>   job:  49146: ERROR
+>   job:  49147: ERROR
+>   job:  49139: ERROR
+>   job:  49142: ERROR
+>   job:  49126: RUNNING
+
+Content of workDir: /tmp/work/3a/8bf48dc7d4fe78e58ccfc10ff22608
+null
+Nov-09 23:01:48.955 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 49143; id: 2; name: ALIGNMENT (HG02573); status: COMPLETED; exit: -; error: -; workDir: /tmp/work/3a/8bf48dc7d4fe78e58ccfc10ff22608 started: 1794253313954; exited: -; ]
+Nov-09 23:01:48.956 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=96; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Nov-09 23:01:48.963 [Task monitor] DEBUG nextflow.executor.GridTaskHandler - Failed to get exit status for process TaskHandler[jobId: 49144; id: 5; name: ALIGNMENT (HG02703); status: RUNNING; exit: -; error: -; workDir: /tmp/work/f7/ede7eab103be956b7ed2b180c9cc53 started: 1794253313962; exited: -; ] -- exitStatusReadTimeoutMillis: 270000; delta: 274960
+Current queue status:
+>   job:  49143: ERROR
+>   job:  49144: ERROR
+>   job:  49145: ERROR
+>   job:  49146: ERROR
+>   job:  49147: ERROR
+>   job:  49139: ERROR
+>   job:  49142: ERROR
+>   job:  49126: RUNNING
+
+Content of workDir: /tmp/work/f7/ede7eab103be956b7ed2b180c9cc53
+null
+Nov-09 23:01:48.963 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 49144; id: 5; name: ALIGNMENT (HG02703); status: COMPLETED; exit: -; error: -; workDir: /tmp/work/f7/ede7eab103be956b7ed2b180c9cc53 started: 1794253313962; exited: -; ]
+Nov-09 23:01:48.964 [Task monitor] DEBUG nextflow.executor.GridTaskHandler - Failed to get exit status for process TaskHandler[jobId: 49145; id: 1; name: ALIGNMENT (HG02562); status: RUNNING; exit: -; error: -; workDir: /tmp/work/c8/91a26e81e30a4240992b02c9b15274 started: 1794253313966; exited: -; ] -- exitStatusReadTimeoutMillis: 270000; delta: 274962
+Current queue status:
+>   job:  49143: ERROR
+>   job:  49144: ERROR
+>   job:  49145: ERROR
+>   job:  49146: ERROR
+>   job:  49147: ERROR
+>   job:  49139: ERROR
+>   job:  49142: ERROR
+>   job:  49126: RUNNING
+
+Content of workDir: /tmp/work/c8/91a26e81e30a4240992b02c9b15274
+null
+Nov-09 23:01:48.964 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 49145; id: 1; name: ALIGNMENT (HG02562); status: COMPLETED; exit: -; error: -; workDir: /tmp/work/c8/91a26e81e30a4240992b02c9b15274 started: 1794253313966; exited: -; ]
+Nov-09 23:01:48.965 [Task monitor] DEBUG nextflow.executor.GridTaskHandler - Failed to get exit status for process TaskHandler[jobId: 49146; id: 4; name: ALIGNMENT (HG02678); status: RUNNING; exit: -; error: -; workDir: /tmp/work/bf/916de063f0cf3eff2ec56a70dd1a32 started: 1794253313968; exited: -; ] -- exitStatusReadTimeoutMillis: 270000; delta: 274963
+Current queue status:
+>   job:  49143: ERROR
+>   job:  49144: ERROR
+>   job:  49145: ERROR
+>   job:  49146: ERROR
+>   job:  49147: ERROR
+>   job:  49139: ERROR
+>   job:  49142: ERROR
+>   job:  49126: RUNNING
+
+Content of workDir: /tmp/work/bf/916de063f0cf3eff2ec56a70dd1a32
+null
+Nov-09 23:01:48.965 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 49146; id: 4; name: ALIGNMENT (HG02678); status: COMPLETED; exit: -; error: -; workDir: /tmp/work/bf/916de063f0cf3eff2ec56a70dd1a32 started: 1794253313968; exited: -; ]
+Nov-09 23:01:48.966 [Task monitor] DEBUG nextflow.executor.GridTaskHandler - Failed to get exit status for process TaskHandler[jobId: 49147; id: 3; name: ALIGNMENT (HG02585); status: RUNNING; exit: -; error: -; workDir: /tmp/work/b0/c30d5c0a7261dec79019ad8788262e started: 1794253313969; exited: -; ] -- exitStatusReadTimeoutMillis: 270000; delta: 274964
+Current queue status:
+>   job:  49143: ERROR
+>   job:  49144: ERROR
+>   job:  49145: ERROR
+>   job:  49146: ERROR
+>   job:  49147: ERROR
+>   job:  49139: ERROR
+>   job:  49142: ERROR
+>   job:  49126: RUNNING
+
+Content of workDir: /tmp/work/b0/c30d5c0a7261dec79019ad8788262e
+null
+Nov-09 23:01:48.966 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 49147; id: 3; name: ALIGNMENT (HG02585); status: COMPLETED; exit: -; error: -; workDir: /tmp/work/b0/c30d5c0a7261dec79019ad8788262e started: 1794253313969; exited: -; ]
+Nov-09 23:01:48.986 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ALIGNMENT (HG02703); work-dir=/tmp/work/f7/ede7eab103be956b7ed2b180c9cc53
+  error [nextflow.exception.ProcessFailedException]: Process `ALIGNMENT (HG02703)` terminated for an unknown reason -- Likely it has been terminated by the external system
+Nov-09 23:01:48.998 [TaskFinalizer-2] INFO  nextflow.processor.TaskProcessor - [f7/ede7ea] NOTE: Process `ALIGNMENT (HG02703)` terminated for an unknown reason -- Likely it has been terminated by the external system -- Error is ignored
+Nov-09 23:01:49.001 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ALIGNMENT (HG02573); work-dir=/tmp/work/3a/8bf48dc7d4fe78e58ccfc10ff22608
+  error [nextflow.exception.ProcessFailedException]: Process `ALIGNMENT (HG02573)` terminated for an unknown reason -- Likely it has been terminated by the external system
+Nov-09 23:01:49.002 [TaskFinalizer-1] INFO  nextflow.processor.TaskProcessor - [3a/8bf48d] NOTE: Process `ALIGNMENT (HG02573)` terminated for an unknown reason -- Likely it has been terminated by the external system -- Error is ignored
+Nov-09 23:01:49.002 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ALIGNMENT (HG02678); work-dir=/tmp/work/bf/916de063f0cf3eff2ec56a70dd1a32
+  error [nextflow.exception.ProcessFailedException]: Process `ALIGNMENT (HG02678)` terminated for an unknown reason -- Likely it has been terminated by the external system
+Nov-09 23:01:49.004 [TaskFinalizer-4] INFO  nextflow.processor.TaskProcessor - [bf/916de0] NOTE: Process `ALIGNMENT (HG02678)` terminated for an unknown reason -- Likely it has been terminated by the external system -- Error is ignored
+Nov-09 23:01:49.004 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ALIGNMENT (HG02585); work-dir=/tmp/work/b0/c30d5c0a7261dec79019ad8788262e
+  error [nextflow.exception.ProcessFailedException]: Process `ALIGNMENT (HG02585)` terminated for an unknown reason -- Likely it has been terminated by the external system
+Nov-09 23:01:49.005 [TaskFinalizer-5] INFO  nextflow.processor.TaskProcessor - [b0/c30d5c] NOTE: Process `ALIGNMENT (HG02585)` terminated for an unknown reason -- Likely it has been terminated by the external system -- Error is ignored
+Nov-09 23:01:49.006 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ALIGNMENT (HG02562); work-dir=/tmp/work/c8/91a26e81e30a4240992b02c9b15274
+  error [nextflow.exception.ProcessFailedException]: Process `ALIGNMENT (HG02562)` terminated for an unknown reason -- Likely it has been terminated by the external system
+Nov-09 23:01:49.007 [TaskFinalizer-3] INFO  nextflow.processor.TaskProcessor - [c8/91a26e] NOTE: Process `ALIGNMENT (HG02562)` terminated for an unknown reason -- Likely it has been terminated by the external system -- Error is ignored
+Nov-09 23:01:49.023 [main] DEBUG nextflow.Session - Session await > all processes finished
+Nov-09 23:01:53.980 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor slurm > No more task to compute -- Execution may be stalled
+Nov-09 23:01:53.981 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: slurm) - terminating tasks monitor poll loop
+Nov-09 23:01:53.981 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-09 23:01:53.986 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Nov-09 23:01:53.997 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=5; ignoredCount=5; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=3h 19m 10s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=5; peakCpus=10; peakMemory=80 GB; ]
+Nov-09 23:01:54.042 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Nov-09 23:01:54.061 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Nov-09 23:01:54.062 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
